@@ -1,33 +1,23 @@
-import React , {useState} from 'react'
+import React from 'react'
 //Basically JS contain UI + Logic
-//You can have seperate css file
 //CSS = seperate / JS + CSS
 
-
+function GreetComponent(props){
+  return <div>
+  <h1>Hello , {props.name}</h1>
+  {props.children}
+  </div>
+}
 
 function App() {
-
-  const [name , setName] = useState('') 
-  const [password , setPassword] = useState('')
   return (
-    <div> 
-      <input type = "text" value =  {name} onChange = {updateTextField} />
-      <input type = "password" value =  {password} onChange = {updatePasswordField} />
-      <button onClick = {submitForm}>Submit Form</button>
-    </div>
+    <GreetComponent name = "Swup" >
+      <p>DEF</p>
+    </GreetComponent>
+
+
   )
 
-  function updateTextField(event){
-    setName(event.target.value)
-  }
-
-  function updatePasswordField(event){
-    setPassword(event.target.value)
-  }
-
-  function submitForm(){
-    console.log(name,password)
-  }
 }
 
 export default App;
