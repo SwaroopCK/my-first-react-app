@@ -12,7 +12,7 @@ function GreetComponent(props){
 function App() {
   return (
     <GreetComponent name = "Swup" >
-      <p>DEF</p>
+      <p>This text will go to props.children</p>
     </GreetComponent>
 
 
