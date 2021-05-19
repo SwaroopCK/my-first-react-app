@@ -1,21 +1,24 @@
 import React from 'react'
 //Basically JS contain UI + Logic
 //CSS = seperate / JS + CSS
+import { BrowserRouter as Router , Switch , Route , Link}from 'react-router-dom'
 
-function GreetComponent(props){
-  return <div>
-  <h1>Hello , {props.name}</h1>
-  {props.children}
-  </div>
+function Home() {
+  return <h1>Home</h1> 
+}
+
+function About() {
+  return <h1>About</h1>
 }
 
 function App() {
   return (
-    <GreetComponent name = "Swup" >
-      <p>This text will go to props.children</p>
-    </GreetComponent>
-
-
+      <Router>
+          <Switch>
+            <Route path = "/" exact = "true " component = { Home } />
+            <Route path = "/about" component = { About } />
+          </Switch>
+      </Router>
   )
 
 }
