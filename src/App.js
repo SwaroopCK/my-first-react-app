@@ -1,15 +1,10 @@
 import React from 'react'
 //Basically JS contain UI + Logic
 //CSS = seperate / JS + CSS
-import { BrowserRouter as Router , Switch , Route , Link}from 'react-router-dom'
+import { BrowserRouter as Router , Switch , Route , Link } from 'react-router-dom'
 
-function Home() {
-  return <h1>Home</h1> 
-}
-
-function About() {
-  return <h1>About</h1>
-}
+import Home from './components/Home'
+import About from './components/About'
 
 function App() {
   return (
