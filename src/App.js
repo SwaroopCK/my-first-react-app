@@ -5,13 +5,15 @@ import { BrowserRouter as Router , Switch , Route , Link } from 'react-router-do
 
 import Home from './components/Home'
 import About from './components/About'
+import Greet from './components/Greet'
 
 function App() {
   return (
       <Router>
           <Switch>
-            <Route path = "/" exact = "true " component = { Home } />
-            <Route path = "/about" component = { About } />
+            <Route path = "/" exact component = { Home } />
+            <Route path = "/about" exact component = { About } />
+            <Route path = "/greet/:name" exact component = { Greet } />
           </Switch>
       </Router>
   )
